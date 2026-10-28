@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+</head>
+<body>
+
+<!--
+    === LIST OF FIXED ERRORS ===
+    Error 1 (Line 10): Incorrect closing tag </head> used instead of </header>.
+    Error 2 (Line 19): Used <td> instead of <th> for table header "Rating".
+    Error 3 (Line 21): Duplicate <tr> opening tag.
+    Error 4 (Line 26): Invalid colspan="3" when cell already has 2 columns; changed to colspan="2".
+    Error 5 (Line 31): Missing closing tag </td> for "Semantic HTML".
+    Error 6 (Line 40): Label for="name" mismatch with input id="fullname".
+    Error 7 (Line 42 & 46): Radio buttons had different name attributes (name="good" and name="poor"). Grouped them under name="rating".
+    Error 8 (Line 44 & 45): Label for "poor" placed before the radio button. Reordered properly.
+    Error 9 (Line 47): Label for="labs" mismatch with checkbox id="lab".
+    Error 10 (Line 49): Typo in closing tag </from>; corrected to </form>.
+    Error 11 (Line 52): Copyright entity missing semicolon (&copy;).
+-->
+
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+
+    <!-- Navigation updated with link to #comments -->
+    <nav>
+        <a href="#results">Results</a> | 
+        <a href="#form">Feedback Form</a> | 
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <!-- Section 1: Feedback Summary -->
+    <section id="results">
+        <h2>Feedback Summary</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Topic</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Introduction to HTML</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td colspan="2">Tables and Forms</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Semantic HTML</td>
+                    <td>4.0</td>
+                </tr>
+                <!-- Part 2 Extension: Week 4 & Week 5 with rowspan="2" -->
+                <tr>
+                    <td>4</td>
+                    <td rowspan="2">Mini Project</td>
+                    <td>4.8</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>4.7</td>
+                </tr>
+                <!-- Part 2 Extension: Average Rating row with colspan="2" -->
+                <tr>
+                    <td colspan="2">Average Rating</td>
+                    <td>4.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 2: Feedback Form -->
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+        <form action="submit_feedback.php" method="post">
+            
+            <p>
+                <label for="fullname">Name:</label><br>
+                <input type="text" id="fullname" name="name">
+            </p>
+
+            <!-- Part 2 Extension: E-mail input -->
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email">
+            </p>
+            
+            <!-- Grouped Radio Buttons including "Average" option -->
+            <p>
+                <label>Overall rating: </label><br>
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="good">Good</label>
+                
+                <input type="radio" id="average" name="rating" value="average">
+                <label for="average">Average</label>
+
+                <input type="radio" id="poor" name="rating" value="poor">
+                <label for="poor">Poor</label>
+            </p>
+
+            <!-- Original Checkbox Fixed -->
+            <p>
+                <input type="checkbox" id="lab" name="lab" value="yes">
+                <label for="lab">I attended all labs</label>
+            </p>
+
+            <!-- Part 2 Extension: Topics for practice checkboxes -->
+            <p>
+                <label>Topics I want more practice on:</label><br>
+                <input type="checkbox" id="topic1" name="practice" value="tables">
+                <label for="topic1">HTML Tables</label><br>
+
+                <input type="checkbox" id="topic2" name="practice" value="forms">
+                <label for="topic2">HTML Forms</label><br>
+
+                <input type="checkbox" id="topic3" name="practice" value="semantic">
+                <label for="topic3">Semantic HTML</label>
+            </p>
+
+            <!-- Part 2 Extension: Section/Group dropdown -->
+            <p>
+                <label for="group">Section / Group:</label><br>
+                <select id="group" name="group">
+                    <option value="group1">Group 1</option>
+                    <option value="group2">Group 2</option>
+                    <option value="group3">Group 3</option>
+                </select>
+            </p>
+            
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </section>
+
+    <!-- Part 2 Extension: New Student Comments Section -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+        <article>
+            <h3>Ahmad Zaki</h3>
+            <p>The practical sessions on HTML forms were very engaging and clear!</p>
+        </article>
+        <article>
+            <h3>Siti Amalin</h3>
+            <p>I enjoyed learning semantic HTML structure. It makes code easier to read!.</p>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+
+</body>
+</html>
