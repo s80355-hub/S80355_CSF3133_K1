@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Faculty Web Development Workshop 2026</title>
+</head>
+<body>
+
+    <!-- Header Section: Event Title and Tagline -->
+    <header>
+        <h1>Faculty Web Development Workshop 2026</h1>
+        <p>Mastering HTML & Web Fundamentals in One Day!</p>
+    </header>
+
+    <!-- Navigation Bar: Internal links jumping to sections -->
+    <nav>
+        <a href="#about">About the Event</a> | 
+        <a href="#schedule">Event Schedule</a> | 
+        <a href="#register">Registration</a>
+    </nav>
+
+    <!-- Section 1: About the Event -->
+    <section id="about">
+        <h2>About the Event</h2>
+        
+        <!-- Article 1: Keynote Speaker -->
+        <article>
+            <h3>Keynote Speaker: Dr. Ahmad Shukri</h3>
+            <p>Dr. Ahmad Shukri is a Web Engineering expert with over 15 years of industry experience in front-end development.</p>
+        </article>
+        
+        <!-- Article 2: Hands-on Activity -->
+        <article>
+            <h3>Hands-on Coding Session</h3>
+            <p>Participants will build accessible, semantic web pages from scratch using HTML5 best practices.</p>
+        </article>
+    </section>
+
+    <!-- Section 2: Event Schedule -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        
+        <!-- Table with <th> headers, 6+ rows, rowspan, and colspan -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:30 AM - 09:00 AM</td>
+                    <td>Registration & Welcome Ceremony</td>
+                    <td>Main Foyer</td>
+                    <td>Event Crew</td>
+                </tr>
+                <tr>
+                    <td>09:00 AM - 10:30 AM</td>
+                    <td>Speech: How to be a Programmer</td>
+                    <!-- rowspan used: Venue is the same for two consecutive sessions -->
+                    <td rowspan="2">Auditorium A</td>
+                    <td>Dr. Ahmad Shukri</td>
+                </tr>
+                <tr>
+                    <td>10:30 AM - 12:30 PM</td>
+                    <td>Hands-on Lab Session 1: Building Forms</td>
+                    <td>Dr. Rozniza Ali</td>
+                </tr>
+                <tr>
+                    <td>12:30 PM - 02:00 PM</td>
+                    <!-- colspan used: Lunch Break spans across Activity, Venue, and Person in Charge -->
+                    <td colspan="3">Lunch Break & Networking</td>
+                </tr>
+                <tr>
+                    <td>02:00 PM - 04:00 PM</td>
+                    <td>Hands-on Lab Session 2: HTML Tables & Accessibility</td>
+                    <td>Lab 3</td>
+                    <td>Sir. Khairul Azim</td>
+                </tr>
+                <tr>
+                    <td>04:00 PM - 05:00 PM</td>
+                    <td>Q&A and Certificate Presentation</td>
+                    <td>Auditorium A</td>
+                    <td>Organising Committee</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 3: Registration Form -->
+    <section id="register">
+        <h2>Event Registration</h2>
+
+        <!-- Form pointing to register.html with POST method -->
+         <form action="register.html" method="post">
+
+            <!-- Text Inputs with matched labels -->
+            <p>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required>
+            </p>
+            
+            <p>
+                <label for="matric">Matric Number:</label><br>
+                <input type="text" id="matric" name="matric" required>
+            </p>
+            
+            <p>
+                <label for="email">E-mail Address:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+            
+            <!-- Radio Buttons: Shared name="year" allows selecting only one -->
+            <p>
+                <label>Year of Study:</label><br>
+                <input type="radio" id="year1" name="year" value="Year 1">
+                <label for="year1">Year 1</label>
+                
+                <input type="radio" id="year2" name="year" value="Year 2">
+                <label for="year2">Year 2</label>
+                
+                <input type="radio" id="year3" name="year" value="Year 3">
+                <label for="year3">Year 3</label>
+                
+                <input type="radio" id="year4" name="year" value="Year 4">
+                <label for="year4">Year 4</label>
+            </p>
+            
+            <!-- Checkboxes for multi-selection choices -->
+            <p>
+                <label>Sessions You Want to Join:</label><br>
+                <input type="checkbox" id="session1" name="sessions" value="Keynote">
+                <label for="session1">Speech: How to be a programmer</label><br>
+                
+                <input type="checkbox" id="session2" name="sessions" value="Forms Lab">
+                <label for="session2">Form Building Workshop</label><br>
+                
+                <input type="checkbox" id="session3" name="sessions" value="Tables Lab">
+                <label for="session3">Tables & Accessibility Workshop</label>
+            </p>
+
+            <!-- Drop-down list with at least 4 options-->
+             <p>
+                <label for="programme">Programme / Faculty:</label><br>
+                <select id="programme" name="programme">
+                    <option value="mi">Maritime Informatics</option>
+                    <option value="se">Software Engineering</option>
+                    <option value="it">Information Technology</option>
+                    <option value="ds">Data science</option>
+                    <option value="cm">Computer Mobile</option>
+                </select>
+             </p>
+
+             <!-- Submit Button -->
+              <p>
+                <input type="submit" value="Submit">
+              </p>
+         </form>
+    </section>
+
+</body>
+</html>
