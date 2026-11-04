@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 3 - Contact Form & Calculator</title>
+</head>
+<body>
+
+    <!-- Header Section using <div> -->
+    <div>
+        <h1>Interactive Web Portal</h1>
+        <span>Connecting Users & Simple Calculations</span>
+    </div>
+    
+    <hr>
+
+    <!-- Content Section using <div> (Contact Form) -->
+    <div>
+        <h2>Contact Form</h2>
+        <form action="#" method="POST">
+            <!-- Email Input -->
+            <p>
+                <label for="user email">Email Address:</label><br>
+                <input type="email" id="user-email" name="contact_date" required>
+            </p>
+
+            <!-- Date Input -->
+            <p>
+                <label fpr="contact-date">Preferred Contact Date:</label><br>
+                <input type="date" id="contact-date" name="contact_date" required>
+            </p>
+
+            <!-- Range Slider Input -->
+            <p>
+                <label for="satisfication">Satisfication Level (1 to 10):</label><br>
+                <input type="range" id="satisfication" name="satisfication" min="1" max="10" value="5">
+            </p>
+
+             <!-- Submit Button -->
+            <p>
+                <button type="submit">Submit Form</button>
+            </p>
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Inline Calculator Section using <div> -->
+    <div>
+        <h2>Inline Addition Calculator></h2>
+        <!-- HTML% form with dynamic output calculation on input -->
+        <form oninput="result.value = parseInt(num1.value || 0) + parseInt(num2.value || 0)">
+            <p>
+                <label for="num1">First Number:</label><br>
+                <input type="number" id="num1" name="num1" value="0">
+            </p>
+
+            <p>
+                <label for="num2">Second Number:</label><br>
+                <input type="number" id="num2" name="num2" value="0">
+            </p>
+
+            <p>
+                <strong>Total Sum: </strong>
+                <output name="result" for="num1 num2">0</output>
+            </p>
+        </form> 
+    </div>
+
+    <hr>
+
+    <!-- Footer Section using <div> -->
+    <div>
+        <p>Contact Us: info@website.com | Phone: 011 444 888</p>
+        <p>&copy; 2026 Interactive Web Portal. All Rights Reserved.</p>
+    </div>
+    
+</body>
+</html>
