@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise 4 - Responsive Webpage</title>
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS Styling -->
+    <style>
+        /* Internal CSS requirement */
+        header h1 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .video-container {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Semantic Header -->
+    <header>
+        <h1>Web Interface Design Portal</h1>
+        <p>Explore multimedia, forms, and responsive design concepts.</p>
+    </header>
+
+    <!-- Navigation Bar using Unordered List -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#contact">Contact Form</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <section id="about">
+        <article>
+            <h2>About This Project</h2>
+            <p>Welcome! This webpage demonstrates modern web design principles combining <strong>HTML5</strong> and <strong>CSS</strong>.</p>
+        </article>
+    </section>
+
+    <!-- Embedded Media Section -->
+    <section id="media">
+        <h2>Featured Video Content</h2>
+        <div class="video-container">
+            <video controls width="100%" poster="https://via.placeholder.com/600x300?text=Sample+Video+Poster">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <track kind="captions" src="subtitles_en.vtt" srclang="en" label="English Captions" default>
+                Your browser does not support HTML5 video.
+            </video>
+            <p><em>Caption: Big Buck Bunny sample video using HTML5 video playback.</em></p>
+        </div>
+    </section>
+
+    <!-- Interactive Form Section -->
+    <section id="contact">
+        <h2>Interactive Contact Form</h2>
+        <form action="#" method="POST" class="styled-form">
+            
+            <!-- Text Input: Name -->
+            <p>
+                <label for="fullname">Name:</label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </p>
+
+            <!-- Text Input: Email -->
+            <p>
+                <label for="useremail">Email:</label><br>
+                <input type="email" id="useremail" name="useremail" placeholder="name@example.com" required>
+            </p>
+
+            <!-- Radio Buttons: Gender -->
+            <p>
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+            </p>
+
+            <!-- Checkboxes: Favorite Hobbies -->
+            <p>
+                <label>Favorite Hobbies:</label><br>
+                <input type="checkbox" id="coding" name="hobbies" value="Coding">
+                <label for="coding">Coding</label><br>
+                <input type="checkbox" id="reading" name="hobbies" value="Reading">
+                <label for="reading">Reading</label><br>
+                <input type="checkbox" id="gaming" name="hobbies" value="Gaming">
+                <label for="gaming">Gaming</label>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <button type="submit">Submit Form</button>
+            </p>
+        </form>
+    </section>
+
+    <!-- Semantic Footer -->
+    <footer>
+        <p>&copy; 2026 CSF3133 Web-Based Interface Design | All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
