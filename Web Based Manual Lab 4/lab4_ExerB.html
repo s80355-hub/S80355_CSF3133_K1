@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+
+<!--
+ERROR LOG (Part 1)
+1. Line 7: Used HTML comment syntax inside style tag. Fixed to CSS comment.
+2. Line 9: Used list-style-type: no; Fixed to none.
+3. Lines 13-16: a:hover placed before a:visited. Fixed order to link, visited, hover, active.
+4. Line 17: text-decoration: overlined; Fixed to overline.
+5. Line 18: Missing colon in color #333333; Fixed to color: #333333;
+6. Lines 22-25: .highlight nested inside #intro. Fixed to separate class rule.
+7. Line 34: Broken link href="menu". Fixed to href="#menu".
+8. Lines 42 & 46: Duplicate id="item". Replaced with class="menu-item".
+9. Line 54: Invalid video type="mp4". Fixed to type="video/mp4" and added controls.
+-->
+
+    <header>
+        <h1>e-Café Campus</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="menu">
+        <h2>Today's Menu</h2>
+        <p class="intro">Freshly brewed coffee and local delights every day.</p>
+        
+        <article class="menu-item">
+            <h3>Kopi Tarik</h3>
+            <p>Was: <span class="old-price">RM 4.50</span> | Only <span class="highlight">RM 3.50</span></p>
+        </article>
+
+        <article class="menu-item">
+            <h3>Nasi Lemak</h3>
+            <p>Was: <span class="old-price">RM 6.50</span> | Only <span class="highlight">RM 5.00</span></p>
+        </article>
+    </section>
+
+    <section id="video">
+        <h2>Watch Our Story</h2>
+        <figure class="center">
+            <iframe 
+                width="400" height="300"
+                src="https://www.youtube.com/embed/UdvPCv4DJfg"
+                title="Youtube Video Player"
+                allow="acce;erometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>   
+            </iframe>
+            <figcaption class="caption">Discover how our coffee is freshly brewed every morning!</figcaption>
+        </figure>
+    </section>
+
+    <!-- Feedback Section (Part 2 Extension) -->
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+        <form action="#" method="POST" class="feedback-form">
+            <p>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="yourname@domain.com" required>
+            </p>
+
+            <p>
+                <label>Visit Type:</label><br>
+                <input type="radio" id="dinein" name="visittype" value="Dine-in" checked>
+                <label for="dinein">Dine-in</label>
+                <input type="radio" id="takeaway" name="visittype" value="Take-away">
+                <label for="takeaway">Take-away</label>
+            </p>
+
+            <p>
+                <label>Favourite Items:</label><br>
+                <input type="checkbox" id="item1" name="fav" value="Kopi Tarik">
+                <label for="item1">Kopi Tarik</label><br>
+                <input type="checkbox" id="item2" name="fav" value="Nasi Lemak">
+                <label for="item2">Nasi Lemak</label><br>
+                <input type="checkbox" id="item3" name="fav" value="Bakery">
+                <label for="item3">Bakery</label>
+            </p>
+
+            <p>
+                <button type="submit">Submit Feedback</button>
+            </p>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus</p>
+        <address>
+            Contact us: <a href="mailto:ecafe@campus.edu.my">ecafe@campus.edu.my</a>
+        </address>
+    </footer>
+
+</body>
+</html>
