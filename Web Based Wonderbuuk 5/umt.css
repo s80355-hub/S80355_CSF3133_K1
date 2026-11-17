@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eef2f5;
+    color: #2c3e50;
+    line-height: 1.7;
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER STYLING */
+
+header {
+    background: linear-gradient(135deg, #003366, #005b96);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #d9edf7;
+}
+
+/* NAVIGATION BAR STYLING */
+
+nav {
+    background-color: #002244;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 24px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect on Links */
+nav ul li a:hover {
+    background-color: #111111;
+    color: #ffcc00;
+}
+
+/* MAIN CONTENT & TEXT ALIGNMENT */
+
+main {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+article, section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #003366;
+    border-bottom: 2px solid #005b96;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+}
+
+article p, section p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* TABLE STYLING (Borders, Alternating Rows, Hover) */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #cbd5e1;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+thead {
+    background-color: #003366;
+    color: #ffffff;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+/* Row Hover Effect */
+tbody tr:hover {
+    background-color: #dbeafe;
+    transition: background-color 0.2s ease;
+}
+
+/* FOOTER STYLING */
+
+footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* RESPONSIVENESS FOR SMALL SCREENS */
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    article, section {
+        padding: 20px;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
