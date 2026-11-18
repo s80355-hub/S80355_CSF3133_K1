@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bookstore</title>
+    
+    <!-- Google Fonts: -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+<!-- ERROR LOG (Part 1 )
+
+1. (shop.html, Line 7): Wrong attribute value rel="stylesheets". Fixed to rel="stylesheet".
+2. (shop.html, Line 10): <style> tag placed inside <body>. Moved CSS to external shop.css.
+3. (shop.html, Line 18): Invalid inline CSS syntax style="color=#1B4F72;". Fixed to use colon (color: #1B4F72;) and styled in header.
+4. (shop.html, Line 20): Table ID mismatch id="product" vs #products in CSS. Fixed to id="products".
+5. (shop.css, Line 2): Misspelled font name 'Robotto'. Fixed to 'Roboto'.
+6. (shop.css, Line 4): Missing hyphen in background-repeat: no repeat;. Fixed to no-repeat.
+7. (shop.css, Line 5): Misspelled property bacground-position. Fixed to background-position.
+8. (shop.css, Line 18): li a set to display: inline; which ignores top/bottom padding. Fixed to display: block;.
+9. (shop.css, Line 23): Invalid pseudo-class syntax li:a:hover. Fixed to li a:hover.
+10. (shop.css, Line 26): Invalid value border-collapse: collapsed;. Fixed to collapse.
+11. (shop.css, Line 34): tr:nth-child(2) only highlights row 2 instead of all even rows. Fixed to tr:nth-child(even).
+12. (shop.css, Line 37 & 45): Invalid pseudo-class :hovered (fixed to :hover) and missing semicolon after background-color: #f1f1f1.
+-->
+
+    <!-- Header Section -->
+    <header id="home">
+        <h1>Campus Bookstore</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <section id="books">
+            <p>Textbooks, stationery and more for every student.</p>
+            
+            <table id="products">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th class="price-col">Price (RM)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Design Basics</td>
+                        <td>Textbook</td>
+                        <td class="price-col">45.00</td>
+                    </tr>
+                    <tr>
+                        <td>A4 Notebook</td>
+                        <td>Stationery</td>
+                        <td class="price-col">6.50</td>
+                    </tr>
+                    <tr>
+                        <td>USB Drive 32GB</td>
+                        <td>Gadget</td>
+                        <td class="price-col">25.00</td>
+                    </tr>
+                    <tr>
+                        <td>Highlighter Set</td>
+                        <td>Stationery</td>
+                        <td class="price-col">9.90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>&copy; 2026 Campus Bookstore</p>
+    </footer>
+
+</body>
+</html>
