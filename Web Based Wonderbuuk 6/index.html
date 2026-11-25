@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderbuuk 6 - Interactive Quiz Application</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz container">
+        <!-- Header Section -->
+        <header>
+            <h1>Web Development Quiz</h1>
+            <p>Test your foundational knowledge in HTML, CSS and JavaScript</p>
+        </header>
+
+        <!-- Main Quiz Content -->
+        <main>
+            <section id="quiz-box">
+                <div class="quiz info">
+                    <span id="question-number">Question 1 or 5</span>
+                    <span class="timer-box">Time Left: <strong id="timer">15</strong>s</span>
+                </div>
+
+                <!-- Question Display -->
+                <h2 id="question-text">Loading Question...</h2>
+
+                <div id="options-container" class="options-list"></div>
+                <div id="feedback" class="feedback-msg"></div>
+
+                <!-- Control Buttons -->
+                <div class="controls">
+                    <button id="submit-btn" type="button">Submit Answer</button>
+                    <button id="next-btn" type="button" class="hidden">Next Question</button>
+                </div>
+            </section>
+
+            <!-- Final Result Section -->
+            <section id="result-box" class="hidden">
+                <h2>Quiz Completed!</h2>
+                <p id="final-score-text">Your final score is 0 out of 5.</p>
+                <button id="restart-btn" type="button">Restart Quiz</button>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Current Score: <strong id="score-display">0</strong></p>
+        </footer>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
